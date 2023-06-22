@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{titulo}}</title>
+    <link rel="stylesheet" href="../css/valid.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</head>
+
+<body>
+    <form id="msform">
+        <fieldset>
+            <h2 class="fs-title">
+                <a href="/eventos">
+                    <img src="images/left-arrow.png" alt=""
+                        style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;">
+                </a>
+                Crear Evento
+            </h2>
+            <h3 class="fs-subtitle">Crear Evento</h3>
+            <h2 class="fs-title">{{modulo}}</h2>
+            <h3 class="fs-subtitle">{{descripcion_modulo}}</h3>
+            <input type="text" id="nombres" placeholder="Ingrese sus Nombres" />
+            <select>
+                <option value="categorias" id="categorias" disabled selected>seleccione la categoria</option>
+                <option value="1">Boda</option>
+                <option value="2">Cumpleaños</option>
+                <option value="3">Matrimonio</option>
+            </select>
+            <h3 class="fs-subtitle">Ingrese la Fecha de Ejecución</h3>
+            <input type="date" id="fechaEjecucion" placeholder="Ingrese la fecha" />
+            <input type="text" id="direccion" placeholder="Ingrese la direccion" />
+            <h3 class="fs-subtitle">Seleccione Estado</h3>
+            <select id="estado">
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+            <div class="pagos">
+            <h3 class="fs-subtitle">Precio Por Pagar</h3>
+            <input type="number" id="precio" placeholder="Ingrese el precio" />
+            <h3 class="fs-subtitle">Precio Pagado</h3>
+            <input type="number" id="pagado" placeholder="Ingrese el pagado" />
+            <h3 class="fs-subtitle">Precio Por Cobrar</h3>
+            <input type="number" id="porCobrar" placeholder="Ingrese faltante" />
+            </div>
+            <br><br>
+          <center>  <button id="btn" type="submit" name="next" class="next action-button">Crear Evento</button></center>
+        </fieldset>
+    </form>
+    <script src="../js/validacionEventos.js"></script>
+</body>
+
+</html>

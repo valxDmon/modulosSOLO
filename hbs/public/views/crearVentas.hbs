@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{RegistrarVenta}}</title>
+    <link rel="stylesheet" href="../css/valid.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</head>
+
+<body>
+    <form id="msform">
+        <fieldset>
+            <h2 class="fs-title">
+                <a href="/ventas">
+                    <img src="images/left-arrow.png" alt=""
+                        style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;">
+                </a>
+                Registrar Ventas
+            </h2>
+            <h3 class="fs-subtitle">Registrar Ventas</h3>
+            <h2 class="fs-title">{{modulo}}</h2>
+            <h3 class="fs-subtitle">{{descripcion_modulo}}</h3>
+            <input type="text" id="nombres" placeholder="Ingrese sus Nombres" />
+            <select>
+                <option value="categorias" id="categorias" disabled selected>seleccione la categoria</option>
+                <option value="1">Boda</option>
+                <option value="2">Cumpleaños</option>
+                <option value="3">Matrimonio</option>
+            </select>
+
+            <h3 class="fs-subtitle">Seleccione Fecha de Ejecución</h3>
+            <input type="date" id="fecha" placeholder="Fecha de Creación" />
+            <h3 class="fs-subtitle">Precio de la Venta</h3>
+            <input type="number" id="precio" placeholder="Ingrese Precio" />
+            <br>
+            <br>
+            <center><button id="btn" type="submit" name="next" class="next action-button">Registrar Venta</button></center>
+        </fieldset>
+    </form>
+    <script src="../js/validacionesVentas.js"></script>
+</body>
+
+</html>
